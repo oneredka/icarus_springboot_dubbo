@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="me.hong.icarus.user.dao.UserMapper">
+
+    <sql id="allColumns">
+       id,
+       create_time,
+       update_time,
+       login_name,
+       password,
+       `name`,
+       phone_number,
+       email,
+       is_delete
+    </sql>
+
+    <select id="selectAllUser" resultType="me.hong.icarus.user.model.User">
+        select <include refid="allColumns"/> from user where is_delete=0
+    </select>
+
+    <select id="selectUserById" resultType="me.hong.icarus.user.model.User">
+        select <include refid="allColumns"/> from user where id=#{id}
+    </select>
+
+
+</mapper>
