@@ -17,8 +17,9 @@ public class UserManager implements UserService {
     UserMapper userMapper;
 
     @Override
-    public User getUserById(String id) {
-        System.out.println("成功啦！！！！！！！！！！！！！！！！！！！！！！！");
-        return userMapper.selectUserById(id);
+    public String getUserById(String id) {
+        User user = userMapper.selectUserById(id);
+        System.out.println(user.toString());
+        return user.toString();
     }
 }
