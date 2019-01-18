@@ -5,7 +5,7 @@ import java.util.Date;
 
 /**
  * @Author : YiHong
- * @Description: 用于实体类继承，companyId属性
+ * @Description: 用于实体类继承
  * @Date: Created in 17:30  2018/8/14.
  * @Modified By:
  */
@@ -13,7 +13,6 @@ public class SuperEntity implements Serializable {
 	private Date createTime;
 	private Date updateTime;
 	private Integer isDelete;
-	private Long companyId;
 
 	public Date getCreateTime() {
 		return createTime;
@@ -39,11 +38,4 @@ public class SuperEntity implements Serializable {
 		this.isDelete = isDelete;
 	}
 
-	public Long getCompanyId() {
-		return companyId;
-	}
-
-	public void setCompanyId(Long companyId) {
-		this.companyId = companyId;
-	}
 }
