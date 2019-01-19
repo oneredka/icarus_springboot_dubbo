@@ -11,14 +11,28 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RefreshScope
-@RequestMapping(value = "/icarus")
+@RequestMapping(value = "/icarus/icarus")
 public class UserController {
 
     @Reference
     UserService userService;
 
-    @GetMapping(value = "/icarus/user/get_id/{id}")
-    public String getUserById(@PathVariable("id") String id) {
+    @ApiOperation(value = "登陆")
+    @ApiImplicitParams(value = {
+           // @ApiImplicitParam(name = "x-access-token", value = "令牌", paramType = "header", required = true),
+            @ApiImplicitParam(name = "user", value = "用户", paramType = "query")
+    })
+    @PostMapping(value = "/user/login")
+    public void  login(@RequestBody User user){
+
+    }
+
+    @ApiOperation(value = "通过id获取用户",httpMethod = "GET")
+    @ApiImplicitParams(value = {
+         //   @ApiImplicitParam(name = "x-access-token", value = "令牌", paramType = "header", required = true),
+})
+    @GetMapping(value = "/user/get_id/{id}")
+    public User getUserById(@PathVariable("id") String id) {
         try {
             return userService.getUserById(id);
         } catch (Exception e) {

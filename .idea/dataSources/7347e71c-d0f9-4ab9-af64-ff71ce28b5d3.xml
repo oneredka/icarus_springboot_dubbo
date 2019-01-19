@@ -1135,7 +1135,7 @@
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="263" parent="229" name="name">
+    <column id="263" parent="229" name="user_name">
       <Position>4</Position>
       <Comment>用户名</Comment>
       <DataType>varchar(255)|0s</DataType>

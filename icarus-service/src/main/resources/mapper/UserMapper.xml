@@ -8,7 +8,7 @@
        update_time,
        login_name,
        password,
-       `name`,
+       user_name,
        phone_number,
        email,
        is_delete
@@ -20,6 +20,10 @@
 
     <select id="selectUserById" resultType="me.hong.icarus.user.model.User">
         select <include refid="allColumns"/> from user where id=#{id}
+    </select>
+
+    <select id="selectUserByLoginNameAndPwd"  resultType="me.hong.icarus.user.model.User">
+        select <include refid="allColumns"/> from  user where login_name=#{loginName} and password=#{pwd} and is_delete=0
     </select>
 
 
