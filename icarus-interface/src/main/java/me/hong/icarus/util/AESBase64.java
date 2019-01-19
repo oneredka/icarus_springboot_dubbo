@@ -17,7 +17,7 @@ import com.sun.org.apache.xml.internal.security.utils.Base64;
  */
 public class AESBase64 {
 
-    static String e = "9238513401340235";
+    static String e = "1111222233334444";
 
     // 加密
     public static String Encrypt(String src, String key) throws Exception {
