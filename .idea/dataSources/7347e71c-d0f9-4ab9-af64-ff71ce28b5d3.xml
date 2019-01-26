@@ -1178,7 +1178,7 @@
     <column id="268" parent="229" name="is_delete">
       <Position>9</Position>
       <Comment>是否删除 0：未删除，1：已删除</Comment>
-      <DataType>int(11)|0s</DataType>
+      <DataType>tinyint(3) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
